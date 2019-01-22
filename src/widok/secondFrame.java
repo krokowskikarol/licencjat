@@ -36,11 +36,9 @@ public class secondFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jLabel1 = new javax.swing.JLabel();
         jsFastIloscPunktow = new javax.swing.JSlider();
-        jlIlePunktowWybrano = new javax.swing.JLabel();
         jbStartSlow = new javax.swing.JButton();
         jpSlow = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -55,7 +53,8 @@ public class secondFrame extends javax.swing.JFrame {
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(251, 0), new java.awt.Dimension(251, 0), new java.awt.Dimension(251, 32767));
         jbStartFast = new javax.swing.JButton();
         jsSlowIloscPunktow = new javax.swing.JSlider();
-        jlIlePunktowWybrano1 = new javax.swing.JLabel();
+        jlIlePunktowWybrano2 = new javax.swing.JLabel();
+        jlIlePunktowWybrano3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -82,12 +81,6 @@ public class secondFrame extends javax.swing.JFrame {
                 jsFastIloscPunktowStateChanged(evt);
             }
         });
-
-        jlIlePunktowWybrano.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jlIlePunktowWybrano.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jsFastIloscPunktow, org.jdesktop.beansbinding.ELProperty.create("${value}"), jlIlePunktowWybrano, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
 
         jbStartSlow.setText("START");
         jbStartSlow.setEnabled(false);
@@ -189,7 +182,7 @@ public class secondFrame extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlFastObroty)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jbStartFast.setText("START");
@@ -202,7 +195,7 @@ public class secondFrame extends javax.swing.JFrame {
 
         jsSlowIloscPunktow.setMajorTickSpacing(1);
         jsSlowIloscPunktow.setMaximum(2000);
-        jsSlowIloscPunktow.setMinimum(1);
+        jsSlowIloscPunktow.setMinimum(10);
         jsSlowIloscPunktow.setMinorTickSpacing(1);
         jsSlowIloscPunktow.setSnapToTicks(true);
         jsSlowIloscPunktow.setValue(10);
@@ -213,11 +206,15 @@ public class secondFrame extends javax.swing.JFrame {
             }
         });
 
-        jlIlePunktowWybrano1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jlIlePunktowWybrano1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIlePunktowWybrano2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlIlePunktowWybrano2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIlePunktowWybrano2.setLabelFor(jsSlowIloscPunktow);
+        jlIlePunktowWybrano2.setText(Integer.toString(jsSlowIloscPunktow.getValue()));
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jsSlowIloscPunktow, org.jdesktop.beansbinding.ELProperty.create("${value}"), jlIlePunktowWybrano1, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+        jlIlePunktowWybrano3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlIlePunktowWybrano3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIlePunktowWybrano3.setLabelFor(jsFastIloscPunktow);
+        jlIlePunktowWybrano3.setText(Integer.toString(jsFastIloscPunktow.getValue()));
 
         jMenu1.setText("Menu");
 
@@ -254,13 +251,13 @@ public class secondFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jsSlowIloscPunktow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jlIlePunktowWybrano1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlIlePunktowWybrano, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jsFastIloscPunktow, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jsSlowIloscPunktow, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlIlePunktowWybrano2, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jsFastIloscPunktow, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                            .addComponent(jlIlePunktowWybrano3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jpSlow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -277,13 +274,13 @@ public class secondFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jsFastIloscPunktow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(jlIlePunktowWybrano, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlIlePunktowWybrano3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jsSlowIloscPunktow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(jlIlePunktowWybrano1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlIlePunktowWybrano2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbStartSlow, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbStartFast, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -291,20 +288,18 @@ public class secondFrame extends javax.swing.JFrame {
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpFast, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                    .addComponent(jpFast, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
                     .addComponent(jpSlow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleParent(this);
 
-        bindingGroup.bind();
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jsFastIloscPunktowStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jsFastIloscPunktowStateChanged
-
+        jlIlePunktowWybrano3.setText(Integer.toString(jsFastIloscPunktow.getValue()));
         WyczyscFast();
         jbStartFast.setEnabled(true);
 
@@ -366,8 +361,10 @@ public class secondFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jsSlowIloscPunktowStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jsSlowIloscPunktowStateChanged
+        jlIlePunktowWybrano2.setText(Integer.toString(jsSlowIloscPunktow.getValue()));
         WyczyscSlow();
         jbStartSlow.setEnabled(true);
+        
     }//GEN-LAST:event_jsSlowIloscPunktowStateChanged
 
     /**
@@ -437,15 +434,14 @@ public class secondFrame extends javax.swing.JFrame {
     private javax.swing.JButton jbStartSlow;
     private javax.swing.JLabel jlFastCzas;
     private javax.swing.JLabel jlFastObroty;
-    private javax.swing.JLabel jlIlePunktowWybrano;
-    private javax.swing.JLabel jlIlePunktowWybrano1;
+    private javax.swing.JLabel jlIlePunktowWybrano2;
+    private javax.swing.JLabel jlIlePunktowWybrano3;
     private javax.swing.JLabel jlSlowCzas;
     private javax.swing.JLabel jlSlowObroty;
     private javax.swing.JPanel jpFast;
     private javax.swing.JPanel jpSlow;
     private javax.swing.JSlider jsFastIloscPunktow;
     private javax.swing.JSlider jsSlowIloscPunktow;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
 }
